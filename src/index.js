@@ -1,5 +1,5 @@
 'use strict';
-
+//load modules
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -41,8 +41,9 @@ db.on('open', function() {
 app.use('/api/users', userRoutes);
 app.use('/api/courses', courseRoutes);
 
-
+//set port
 app.set('port', 5000);
+//use morgan to log
 app.use(morgan('dev'));
 
 
@@ -55,6 +56,7 @@ app.use(function(req, res, next) {
 	next(err);
 })
 
+//ecpress global error handler
 app.use(function(err, req, res, next) {
 	res.status(err.status || 500);
 	res.json({
@@ -64,7 +66,7 @@ app.use(function(err, req, res, next) {
 	});
 })
 
-// Begin listenserver on port 5000.
+// Begin listenserver on port.
 
 app.listen(app.get('port'), function() {
   	console.log('Server is now running at http://localhost:5000.');
