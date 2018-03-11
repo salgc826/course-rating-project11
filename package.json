@@ -1,0 +1,23 @@
+{
+  "name": "mongodb-course-rating-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "Carlos Salgado",
+  "license": "ISC",
+  "dependencies": {
+    "basic-auth": "^2.0.0",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mongodb": "^2.2.35",
+    "mongoose": "^4.13.11",
+    "mongoose-seeder": "^1.2.1",
+    "morgan": "^1.9.0",
+    "validator": "^9.4.1"
+  }
+}
