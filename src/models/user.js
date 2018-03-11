@@ -27,6 +27,7 @@ var UserSchema = new mongoose.Schema ({
 })
 
 
+// authenticate input against database documents
 UserSchema.statics.userAuthentication = function(email, password, callback) {
 	var User = this;
 
@@ -48,9 +49,7 @@ UserSchema.statics.userAuthentication = function(email, password, callback) {
 }
 
 
-// Passwords must be hashed prior to pushing data into database using a
-// pre save hook.
-
+// hash password before saving to database
 UserSchema.pre('save', function(next) {
 	var User = this;
 

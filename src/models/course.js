@@ -1,4 +1,6 @@
-const mongoose = require("mongoose");
+var mongoose = require('mongoose');
+
+
 
 
 // Course schema
